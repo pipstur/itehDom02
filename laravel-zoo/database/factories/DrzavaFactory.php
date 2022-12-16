@@ -17,7 +17,9 @@ class DrzavaFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'ime' => $this->faker->country(),
+            'broj_stanovnika' => $this->faker->numberBetween($min = 50000, $max = 10000000),
+            'predsednik' => $this->faker->name()
         ];
     }
 }

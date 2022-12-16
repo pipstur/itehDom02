@@ -15,6 +15,9 @@ return new class extends Migration
     {
         Schema::create('zoos', function (Blueprint $table) {
             $table->id();
+            $table->string('naziv');
+            $table->string('adresa');
+            $table->foreignId('drzava_id')->constrained('drzavas');
             $table->timestamps();
         });
     }

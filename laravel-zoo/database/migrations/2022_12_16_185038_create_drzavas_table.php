@@ -15,6 +15,8 @@ return new class extends Migration
     {
         Schema::create('drzavas', function (Blueprint $table) {
             $table->id();
+            $table->string('ime');
+            $table->integer('broj_stanovnika');
             $table->timestamps();
         });
     }

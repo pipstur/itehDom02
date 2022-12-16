@@ -15,6 +15,9 @@ return new class extends Migration
     {
         Schema::create('zivotinjas', function (Blueprint $table) {
             $table->id();
+            $table->string('ime');
+            $table->string('tip');
+            $table->integer('godine');
             $table->timestamps();
         });
     }
