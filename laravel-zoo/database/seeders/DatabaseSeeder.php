@@ -4,6 +4,9 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Database\Seeders\ZooSeeder;
+use Database\Seeders\DrzavaSeeder;
+use Database\Seeders\ZivotinjaSeeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -20,5 +23,11 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
+        $seederZoo = new ZooSeeder();
+        $seederZoo->run();
+        $seederDrzava = new DrzavaSeeder();
+        $seederDrzava->run();
+        $seederZivotinja = new ZivotinjaSeeder();
+        $seederZivotinja->run();
     }
 }

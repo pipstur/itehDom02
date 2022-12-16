@@ -13,12 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('zoos', function (Blueprint $table) {
-            $table->id();
-            $table->string('naziv');
-            $table->string('adresa');
-            // $table->foreignId('drzava_id')->constrained('drzavas');
-            $table->timestamps();
+        Schema::table('drzavas', function (Blueprint $table) {
+            $table->after('broj_stanovnika', function ($table) {
+                $table->string('predsednik');
+            });
         });
     }
 
@@ -29,6 +27,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('zoos');
+        //
     }
 };
