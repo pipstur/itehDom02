@@ -13,9 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::table('zoos', function (Blueprint $table) {
-            $table->renameColumn('naziv', 'ime');
-        });
+        // Schema::table('zoos', function (Blueprint $table) {
+        //     $table->renameColumn('naziv', 'ime');
+        // });
     }
 
     /**

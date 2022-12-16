@@ -17,7 +17,7 @@ class ZooFactory extends Factory
     public function definition()
     {
         return [
-            'ime' => $this->faker->sentence($nbWords = 2, $variableNbWords = true),
+            'naziv' => $this->faker->sentence($nbWords = 2, $variableNbWords = true),
             'adresa' => $this->faker->address(),
             'drzava_id' => Drzava::factory()
         ];
