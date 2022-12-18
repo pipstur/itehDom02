@@ -17,7 +17,7 @@ return new class extends Migration
             $table->after('godine', function ($table) {
                 $table->foreignID('zoo_id')->constrained('zoos');
             });
-        });
+        });                 
     }
 
     /**

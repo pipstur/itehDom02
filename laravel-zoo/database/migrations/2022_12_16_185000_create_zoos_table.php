@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('naziv');
             $table->string('adresa');
-            // $table->foreignId('drzava_id')->constrained('drzavas');
+            $table->foreignId('drzava_id')->constrained('drzavas');
             $table->timestamps();
         });
     }
