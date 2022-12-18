@@ -18,6 +18,7 @@ use App\Http\Controllers\ZooController;
 Route::get('/drzava/{drzava_id}', [DrzavaController::class, 'show']);
 Route::get('/drzava', [DrzavaController::class, 'index']);
 #Route::get('/zoo', [ZooController::class, 'index']);
+Route::resource('zoo', ZooController::class);
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
